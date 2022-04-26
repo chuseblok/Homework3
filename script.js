@@ -1,38 +1,147 @@
+var lowerCase = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z'
+]
+var upperCase = [
+  "A",
+  "B",
+  "C",
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z'
+]
+var numberChar = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+]
+var specialChar = [
+  '!',
+  '@',
+  '#',
+  '$',
+  '&',
+  '.',
+  '*',
+  '?',
+  '^',
+  '%'
+]
+var yes = Boolean(true)
+var no = Boolean(false)
+
+function getPasswordOptions() {
+  var length = parseInt(
+    prompt= ('How Many Character Would You Like Your Password To Have?')
+
+  /*variable that checks for a number -- if/else -- Number.isNAN(length)*/
+
+/* variable that checks IF length is greater than 8 and smaller than 128 */
+
+
+  )
+
+  var options = window.prompt('')
+}
+
 function generatePassword(){
-  var options = window.prompt('Lower Case Characters?');
-  if (!options); 
+  var Lower = window.prompt('Lower Case Characters?');
+  if (yes > 0){
+    
+    var index = Math.floor(Math.random() * lowerCase.length);
+    var Lower = lowerCase[index]; 
+    password.textContent = index.lowerCase;
+  
+  } 
+  
+  console.log(Lower)
 
-  var options = window.prompt('Upper Case Characters?');
-  if (!options); 
-
-  var options = window.prompt('Number Characters?');
-  if (!options);
-
-  var options = window.prompt('Special Characters?');
-  if (!options); 
-
-  var options = window.prompt('Length');
-  if(!options); {var options = Math.floor(Math.random() * options.length);
-    return;
+  var Upper = window.prompt('Upper Case Characters?');
+  if  (yes > 0){
+    
+    var index = Math.floor(Math.random() * upperCase.length);
+    var Upper = upperCase[index]; 
+ 
   }
+  console.log(Upper)
+
+  var numb = window.prompt('Number Characters?');
+  if (yes > 0){
+    var index = Math.floor(Math.random() * numberChar.length);
+    var numb = numberChar[index]; 
+    } 
+  
+  console.log(numb)
+
+  var rand = window.prompt('Special Characters?');
+  if (yes > 0){
+    var index = Math.floor(Math.random() * specialChar.length);
+    var rand = specialChar[index]; 
+    } 
+      
+    
+
+  console.log(rand)
+  /* if hasLowerCase === false && hasUperCase === false && hasNubmer === false && hasCharacters === false {then alert "need to add valid requests"} */
+
+/* store each input in to an object -- haslowercase: hasLowerCase */
+
+/* randomize each object */
+
   
  };
 
-
-
-function getRandomLower(){
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-};
-function getRandomUpper(){
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-};
-function getRandomNumber(){
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48); 
-};
-function getRandomSymbol(){
-  var symbols = ',./?=<>()*&^%$#@!~`';
-  return symbols [Math.floor(Math.random() * symbols.length)]; 
-};
 
 
  // write coder here, whatever value function
